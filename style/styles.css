@@ -88,3 +88,27 @@ button#contact:hover{
     background-color: var(--primary-700-paste-color);
     color: white;
 }
+
+.marque{ 
+    background-color: var(--neutral-paste-marque-btn-subtxt-700-color);
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.marque-gap{
+
+        gap: 5.828rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1.563rem;
+}
+
+.flex-marque{
+    display: flex;
+    width: max-content; 
+    animation: infinite marque-translate linear 10s;
+}
+
+@keyframes marque-translate {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); } 
+}
