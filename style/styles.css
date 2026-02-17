@@ -1,0 +1,90 @@
+:root {
+ --font-popins: "Poppins", sans-serif;
+ --font-inter:"Inter", sans-serif;
+ --primary-700-paste-color: #00C2B0;
+ --second-blue-color: #052252;
+ --nutral-900-color-title:#111827;
+ --neutral-700-color-subtext:#374151;
+ --neutral-paste-marque-btn-subtxt-700-color:#00C7B4;
+ --font-subtext-1r: 1rem;/*16px*/
+ --card-heading-1_5r:1.5rem;/*24px*/
+ --page-title-2r:2rem;/*32px*/
+ --heading_style1_4r: 4rem;/*56px*/
+ --heading-style2_3r: 3rem;/*48px*/
+ --card-bg1:#f4f4f5;
+ --banner-bg:#E5FFFD;
+ --paid-banner-bg:#FAFAFA;
+ --faq-bg-to:#E5FFFD;
+ --faq-bg-from: #C9F8F4;
+ --footer-bg:#009E8F;
+ --form-placeholder:#6B7280;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    max-width: 95rem;
+    width: 100%; 
+    padding-left: 7.5rem;
+    padding-right: 7.5rem;
+    margin: 0 auto;
+}
+
+
+
+
+.flex{
+    display: flex;
+
+}
+.nav{
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+nav div#nav-item{
+    justify-content: space-between;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+        
+}
+.flex-nav-link{
+    display: flex;
+    gap: 0.5rem ;
+    padding: 0.5rem;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    color: var(--nutral-900-color-title);
+    font-size: var(--font-subtext-1r);
+   
+
+}
+
+.nav-link{
+    text-decoration-line: none;
+    color: #111827;
+     margin-bottom: 1rem;
+}
+.nav-link:hover{
+    color: #156fff;
+}
+button#contact{
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--primary-700-paste-color) ;
+    border-radius: 0.5rem;
+    color: var(--primary-700-paste-color);
+    background-color: white;
+    cursor: pointer;
+}
+
+
+button#contact:hover{
+    background-color: var(--primary-700-paste-color);
+    color: white;
+}
