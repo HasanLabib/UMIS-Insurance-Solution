@@ -5,6 +5,13 @@ document.getElementById("bookBtn").addEventListener("click", function (e) {
     url: "https://calendly.com/btcimroy20/30min",
   });
 });
+document.getElementById("affiliateBtn").addEventListener("click", function (e) {
+  e.preventDefault();
+
+  Calendly.initPopupWidget({
+    url: "https://calendly.com/btcimroy20/30min",
+  });
+});
 
 let marque_div = document.querySelector("#marque-div");
 console.log(marque_div);
@@ -49,6 +56,92 @@ list.forEach((li) => {
 
 part_ul.append(...list_element);
 console.log(list_element);
+
+const affiliate = document.getElementById("affiliate-card-container");
+
+const list_title = [
+  "Click get leads",
+  "Share with clients",
+  "Earns referral fees",
+];
+const list_txt = [
+  "Lorem ipsum dolor sit amet consectetur. Tristique molestie feugiat ornare in morbi nunc fringilla. Bibendum urna diam tincidunt elementum tristique placerat nisl egestas nunc. ",
+  "Lorem ipsum dolor sit amet consectetur. Tristique molestie feugiat ornare in morbi nunc fringilla. Bibendum urna diam tincidunt elementum tristique placerat nisl egestas nunc. ",
+  "Lorem ipsum dolor sit amet consectetur. Tristique molestie feugiat ornare in morbi nunc fringilla. Bibendum urna diam tincidunt elementum tristique placerat nisl egestas nunc. ",
+];
+
+const list_img = [
+  "../assets/img/affliate/img_1.jpg",
+  "../assets/img/affliate/img_2.jpg",
+  "../assets/img/affliate/img_3.jpg",
+];
+
+list_title.forEach((li_t, idx) => {
+  const card = document.createElement("div");
+  card.classList.add("card");
+  const card_img_div = document.createElement("div");
+  card_img_div.classList.add("card_img_div");
+  const card_img = document.createElement("img");
+  card_img.src = list_img[idx];
+  card_img.loading = "lazy";
+  card_img.classList.add("card_img");
+  card_img_div.appendChild(card_img);
+  card.appendChild(card_img_div);
+  const card_content = document.createElement("div");
+  card_content.classList.add("card-content");
+  const card_h1 = document.createElement("h1");
+  card_h1.classList.add("card-h1");
+  card_h1.textContent = li_t;
+  const card_p = document.createElement("p");
+  card_p.classList.add("card-p");
+  card_p.textContent = list_txt[idx];
+  card_content.appendChild(card_h1);
+  card_content.appendChild(card_p);
+  card.appendChild(card_content);
+  card.style.fontFamily = `"Poppins", sans-serif`;
+  affiliate.appendChild(card);
+});
+
+let count = 0;
+const nextBtn = document.getElementById("nextCard");
+const prevBtn = document.getElementById("prevCard");
+
+nextBtn.addEventListener("click", () => {
+  const totalCards = affiliate.children.length;
+  if (window.innerWidth <= 640) {
+    count++;
+    if (count >= totalCards) {
+      count = 0;
+    }
+    const offset = count * 100;
+    affiliate.style.transform = `translateX(-${offset}%)`;
+  }
+});
+prevBtn.addEventListener("click", () => {
+  if (window.innerWidth <= 640) {
+    const totalCards = affiliate.children.length;
+    count--;
+    if (count < 0) {
+      count = totalCards - 1;
+    }
+    const offset = count * 100;
+    affiliate.style.transform = `translateX(-${offset}%)`;
+  }
+});
+
+const nextPrev = () => {
+  if (window.innerWidth < 640) {
+    nextBtn.style.display = "block";
+    prevBtn.style.display = "block";
+  } else {
+    nextBtn.style.display = "none";
+    prevBtn.style.display = "none";
+    count = 0;
+    affiliate.style.transform = "translateX(0)";
+  }
+};
+window.addEventListener("resize", nextPrev);
+nextPrev();
 
 // const nav_desk = document.getElementsByTagName("nav")[0];
 // const nav_mobile = document.getElementById("nav-mobile");
