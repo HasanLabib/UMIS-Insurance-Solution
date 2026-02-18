@@ -10,26 +10,90 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://assets.calendly.com/assets/external/widget.css"
+      rel="stylesheet"
+    />
+
     <title>Document</title>
   </head>
   <body>
     <header class="container">
-      <nav class="flex nav">
+      <nav class="flex nav pop">
         <img src="./assets/img/logo.png" loading="lazy" alt="logo" />
-        <div id="nav-item" class="flex">
+        <div id="nav-item" class="flex nav-item">
           <ul class="flex-nav-link">
-            <li><a href="#" class="nav-link">Home</a></li>
-            <li><a href="#about-us" class="nav-link">About Us</a></li>
-            <li><a href="#faq" class="nav-link">FAQ</a></li>
-            <li><a href="#gallery" class="nav-link">Gallery</a></li>
+            <li><a href="#" class="nav-link nav-pad-item">Home</a></li>
+            <li>
+              <a href="#about-us" class="nav-link nav-pad-item">About Us</a>
+            </li>
+            <li><a href="#faq" class="nav-link nav-pad-item">FAQ</a></li>
+            <li>
+              <a href="#gallery" class="nav-link nav-pad-item">Gallery</a>
+            </li>
           </ul>
-          <button type="button" id="contact">Contact us</button>
+          <button type="button" class="nav-pad-item pop" id="contact">
+            Contact us
+          </button>
         </div>
       </nav>
+      <nav id="nav_mobile" class="hidden"></nav>
     </header>
+
     <main class="">
-      <section id="banner" class=""></section>
-      <section id="marque" class="marque" >
+      <section id="banner" class="container bg-banner">
+        <div class="flex-banner">
+          <div class="banner-content">
+            <h1 class="banner-h1">
+              YOUR <span class="banner-h1-span">HIGH-MOVING</span> INSURANCE
+              SOLUTION
+            </h1>
+            <p class="banner-content-subtext">
+              Lorem ipsum dolor sit amet consectetur. Lobortis massa urna
+              dapibus amet massa ullamcorper eget facilisi. Velit ultricies.
+            </p>
+            <button id="bookBtn" class="banner-btn">Book Now</button>
+          </div>
+          <div class="grid-banner">
+            <div class="grid-cols">
+              <img src="./assets/img/banner/img_1.jpg" loading="lazy" />
+              <img src="./assets/img/banner/img_3.jpg" loading="lazy" />
+            </div>
+
+            <div class="grid-cols">
+              <img src="./assets/img/banner/img_2.jpg" loading="lazy" />
+              <img src="./assets/img/banner/img_4.jpg" loading="lazy" />
+            </div>
+          </div>
+        </div>
+        <div class="banner-under-text">
+          Lorem ipsum dolor sit amet consectetur. Ornare in imperdiet integer
+          integer felis et aliquam elit dolor. Diam etiam quis feugiat facilisi
+          malesuada proin ac ac. Amet auctor diam consequat odio in molestie
+          fringilla. Luctus suspendisse amet semper tellus molestie vivamus quis
+        </div>
+      </section>
+      <section id="why-partner" class="container">
+        <img
+          src="./assets/img/partner/img_1.jpg"
+          loading="lazy"
+          class="why-img"
+        />
+        <div class="partner-content">
+          <h1 class="partner-h1">
+            Why <span class="partner-h1-span">partner with </span> us?
+          </h1>
+          <hr class="partner-hr"/>
+          <p class="sub">
+            Lorem ipsum dolor sit amet consectetur. Lobortis massa urna dapibus
+            amet massa ullamcorper eget facilisi. Velit ultricies.
+          </p>
+
+          <ul class="part-ul"></ul>
+        </div>
+      </section>
+
+      <section id="marque" class="marque">
         <div id="marque-div" class="container flex-marque marque-gap">
           <img
             src="./assets/img/marqui_logo/lg_1.png"
@@ -60,5 +124,9 @@
       </section>
     </main>
     <script src="./JS/index.js"></script>
+    <script
+      src="https://assets.calendly.com/assets/external/widget.js"
+      async
+    ></script>
   </body>
 </html>
